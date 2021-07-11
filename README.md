@@ -1,7 +1,6 @@
 # Warbler
 ### For this project I took an already existing code base (provided by Springboard) of a twitter clone and added functionality, searched for & fixed bugs, and created the automated tests
 <br>
-<br>
 
 ## Additions, changes and improvments made
 - Implemented logout functionality
