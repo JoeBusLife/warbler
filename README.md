@@ -1,5 +1,5 @@
 # Warbler
-### For this project I was given existing code base (provided by Springboard) of a twitter clone. I added various functionality, searched for & fixed bugs, and created the automated tests.
+### For this project I was given an existing code base (provided by Springboard) of a twitter clone. I added various functionality, searched for & fixed bugs, and created the automated tests.
 
 ### Live Site: https://warbler-joeh.herokuapp.com/
 <br>
