@@ -205,8 +205,10 @@ def add_follow(follow_id):
     g.user.following.append(followed_user)
     db.session.commit()
 
+    # Get the url to redirect to
     url = request.form.get('url') or session.get('url') or '/'
-    session['url'] = None
+    if url.find("?q") != -1:
+        session['url'] = None
     return redirect(url)
 
 
@@ -225,9 +227,11 @@ def stop_following(follow_id):
         db.session.commit()
     except ValueError:
         pass
-
+    
+    # Get the url to redirect to
     url = request.form.get('url') or session.get('url') or '/'
-    session['url'] = None
+    if url.find("?q") != -1:
+        session['url'] = None
     return redirect(url)
 
 
@@ -244,7 +248,6 @@ def add_like(msg_id):
     db.session.commit()
     
     url = request.form.get('url') or '/'
-    session['url'] = None
     return redirect(url)
 
 
@@ -265,7 +268,6 @@ def remove_like(msg_id):
         pass
     
     url = request.form.get('url') or '/'
-    session['url'] = None
     return redirect(url)
 
 
